@@ -32,12 +32,11 @@ jobs:
     if: contains (github.ref, 'dev')
     runs-on: self-hosted
     needs: test-dev
-    container: 
-      image: fernandindtjr/gataria-deploy:1.0
-      credentials: 
-        username:
-        password: 
-
+    # container: 
+    #   image: fernandindtjr/gataria-deploy:1.0
+    #   credentials: 
+    #     username:
+    #     password: 
     steps:
     - name: run command
       run: echo $GITHUB_SHA
