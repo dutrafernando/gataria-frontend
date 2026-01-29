@@ -11,6 +11,5 @@ spec:
       targetPort: {{ .Values.service.targetPort }}
       protocol: TCP
       name: http
-      nodePort: {{ .Values.service.nodePort }}
   selector:
     {{- include "gataria-frontend.selectorLabels" . | nindent 4 }}
