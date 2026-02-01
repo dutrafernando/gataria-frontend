@@ -39,5 +39,14 @@ jobs:
         password: 
 
     steps:
+<<<<<<< main
     - name: run command
       run: echo $GITHUB_SHA
+=======
+    - name: Add ChartMuseum Repo
+      run: helm repo add gataria-charts http://chartmuseum:8080   
+    - name: helm update repo
+      run: helm repo update
+    - name: Deploy dev
+      run: helm upgrade gataria-frontend gataria-charts/gataria-frontend -n dev --set "image.tag=dev$GITHUB_SHA" --set "ingress.hosts[0].hosts=dev.gataria.example" --set "ingress.hosts[0].paths[0].path=/*" --set "ingress.hosts[0].paths[0].pathType=Prefix" || helm install gataria-frontend gataria-charts/gataria-frontend -n dev --set "image.tag=dev$GITHUB_SHA" --set "ingress.hosts[0].hosts=dev.gataria.example" --set "ingress.hosts[0].paths[0].path=/*" --set "ingress.hosts[0].paths[0].pathType=Prefix"
+>>>>>>> local
