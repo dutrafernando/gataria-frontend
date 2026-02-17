@@ -1,9 +1,10 @@
 ---
 name: Gataria CI/CD Prod
 on:
-  release: 
-    types: [published]
-      
+  push: 
+    branches: 
+      - main
+
 
 jobs:
   build-prod:
