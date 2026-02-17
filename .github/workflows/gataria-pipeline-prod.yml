@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-prod:
-    name: Build prod
+    name: Build prod 
     runs-on: self-hosted
     steps:
     - name: Clone repository
