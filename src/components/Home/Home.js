@@ -21,7 +21,7 @@ function Home() {
           fontFamily: "serif",
         }}
       >
-        Te ajudamos adotar um gatinho!
+        Te ajudamos adotar uns gatinhos!
       </p>
     </>
   );
